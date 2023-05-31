@@ -1,0 +1,7 @@
+{:deps {org.clojure/clojure         {:mvn/version "1.11.1"}
+        ai.kleene/lumber            {:mvn/version "0.0.23"}}
+
+ :mvn/repos
+ {"minoro" {:url "s3://minoro-repo/releases/?region=eu-west-1"}}
+
+ :paths ["src"]}

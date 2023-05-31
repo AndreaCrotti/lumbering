@@ -20,7 +20,8 @@
 
          {:file {:filename file-path}})]
 
-    (sh/sh "clj" "-X" "sub-log/mylog")
+    (lumber/log ::from-main {:message "logging from the main file as well"})
+    (println (sh/sh "clj" "-X" "sub-log/main"))
     (stop-fn)
     (assert (.isFile (io/file file-path))
             "Log file not found")))

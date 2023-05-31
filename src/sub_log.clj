@@ -5,8 +5,8 @@
    [hello :refer [file-path]]
    [lumber.core :as lumber]))
 
-(defn mylog [& _args]
-  (when (.isFile (io/file file-path))
+(defn main [& _args]
+  #_(when (.isFile (io/file file-path))
     (io/delete-file file-path))
 
   (let [stopper

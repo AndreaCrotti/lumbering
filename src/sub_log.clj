@@ -5,7 +5,7 @@
    [hello :refer [file-path]]
    [lumber.core :as lumber]))
 
-(defn mylog []
+(defn mylog [& _args]
   (when (.isFile (io/file file-path))
     (io/delete-file file-path))
 
